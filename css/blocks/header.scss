@@ -1,0 +1,137 @@
+.header {
+	padding-top: rem(12px);
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__logo {
+
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+	flex: 1;
+	text-align: right;
+	margin-right: rem(20px);
+
+  @include tablets() {
+    display: none;
+  }
+}
+
+
+////////////////////////////////////////////////////
+
+.header__p-menu {
+	display: flex;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	justify-content: space-between;
+	padding: 10px 15px 0px;
+}
+
+.logo {
+
+}
+
+.humburger--hide {
+	opacity: 0;
+}
+
+.humburger--active {
+	width: rem(25px);
+	height: rem(25px);
+	margin-top: rem(30px);
+	cursor: pointer;
+}
+
+.p-menu {
+	position: fixed;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.9);
+	display: flex;
+	opacity: 0;
+	z-index: -1;
+	flex-direction: column;
+	align-items: center;
+	transition: all .3s linear;
+}
+
+.p-menu--active {
+	opacity: 1;
+	z-index: 9999;
+	top: 0;
+}
+
+.p-menu__menu {
+	margin: auto;
+}
+
+.p-menu__item {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+
+	&:after {
+		content: "";
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: #fff;
+		margin: 15px auto;
+	}
+
+	&:last-child:after {
+		display: none;
+	}
+}
+
+.p-menu__link {
+	display: block;
+	padding: 0 10px;
+	border-radius: 5px;
+	width: fit-content;
+	height: 30px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	@include ubuntu;
+	font-size: rem(24px);
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.2);
+	
+		transition: all .3s linear;
+	}	
+}
+
+.close-btn {
+	width: rem(24px);
+	height: rem(24px);
+	svg {
+		max-width: 100%;
+	}
+
+	@include phones {
+		margin-left: rem(10px);
+		margin-top: rem(5px);
+	}	
+}

@@ -1,0 +1,45 @@
+.nav__list {
+	width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+	white-space: nowrap;
+	padding: 5px;
+
+	&:last-child {
+		margin-right: 0;
+		&:after {
+			display: none;
+		}
+	}
+
+	&:after {
+		display: inline-block;
+		content: "";
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: white;
+		margin: 0 12px;
+		vertical-align: middle;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.nav__link {
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	@include ubuntu(medium);
+	
+	@include laptop {
+		font-size: rem(11px);
+	}
+}
+

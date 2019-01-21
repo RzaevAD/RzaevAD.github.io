@@ -1,0 +1,48 @@
+.prompt-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    top: 50%;
+    left: 99999px;//50%;
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(-40%);
+
+    width: rem(250px);
+    height: rem(100px);
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid rgb(194, 194, 194);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    &.prompt-form-container--active {
+        left: 50%;//-99999px;//50%;
+        opacity: 1;
+    }
+}
+
+.order__form {
+    position: relative;
+    
+}
+
+.prompt-message {
+    display: flex;
+    @include ubuntu;
+    color: #2f3234;
+}
+
+.promt__form-button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: rem(10px); 
+}
+
+.container__order {
+    position: relative;
+}
+

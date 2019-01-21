@@ -1,0 +1,342 @@
+.burger {
+    background: linear-gradient(to bottom, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+    @include gagalin;
+}
+
+.container__burger { 
+    display: flex;
+    justify-content: center;
+    
+    @include tablets {
+        width: 80vw;
+    }
+}
+
+.wrap {
+    box-sizing: border-box;
+    
+    @include tablets {
+        height: 80vh;
+    }
+ }
+
+
+.burger__list {
+    display: flex;
+}
+
+.slick-prev::before {
+    display: flex;
+    font-size: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+
+    content: "";
+    display: block;
+    width: rem(22px);
+    height: rem(40px);
+    background: url('../img/burger/arrow.png') center center no-repeat;
+    background-size: cover;
+} 
+
+.slick-slide {
+    outline: none;
+}
+
+.slick-next::before {
+    display: flex;
+    font-size: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform: rotate(180deg) translateY(+50%);
+    border: none;
+
+    content: "";
+    display: block;
+    width: rem(22px);
+    height: rem(40px);
+    background: url('../img/burger/arrow.png') center center no-repeat;
+    background-size: cover;
+} 
+
+
+.burger__item {
+    display: flex;
+    margin:  0 rem(5px);
+    padding: 40px 0;
+ }
+
+
+.burger__wrap {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.slick-slider {
+    border: none;
+}
+
+.burger__left,
+.burger__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    @include tablets {
+        width: 70%;
+        max-height: 50vh;
+    }
+}
+
+.burger__left {
+    position: relative;
+    margin-right: rem(20px);
+    padding-top: rem(50px);
+    padding-bottom: rem(50px);
+    
+    @include tablets {
+        
+    }    
+}
+
+.burger__descr,
+.burger__kkal  {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(90px);
+    height: rem(90px);
+    left: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.burger__descr {
+    top: 0;   
+    background: #f08c33;
+
+    &:hover {
+        background: #e45028;;
+        .burgers__consist-popup {
+            left:  25%;
+            opacity: 0.6;
+        }
+    }
+
+    &:hover .burgers__consist-popup {
+        left:  100%;
+        opacity: 1;
+    }  
+
+    
+}
+
+.descr__text {
+    bottom: 0;
+    right: 0;
+    color: #fff;
+}
+
+.burger__img {
+    max-width: 100%;
+}
+
+.burger__kkal {
+    bottom: 0;
+    color: #fff;
+
+    @include tablets {
+        left: 80%;
+        top: 0;
+    }
+
+}
+
+.icon-burger,
+.icon-kkal {
+    width: rem(50px);
+    height: rem(50px);
+    svg {
+        max-width: 100%;
+    }
+}
+
+.kkal__num {
+    position: absolute;
+    top: 30%;
+}
+
+.kkal__text {
+
+}
+
+.burger__right {
+    color: #fff;
+
+    @include tablets {
+        width: 80%;
+        text-align: center;
+        
+    } 
+    
+}
+
+.burger__title {
+    font-size: 4.5rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+
+    @include tablets {
+        text-align: center;        
+    }
+    @include phones {
+        font-size: 2.5rem;
+    }
+}
+
+.burger__text {
+    @include ubuntu;   
+    font-size: rem(14px);
+    margin-bottom: rem(15px);
+
+    @include tablets {
+        text-align: center;       
+    }
+}
+
+.burger__order {
+    display: flex;
+    @include gagalin;
+    align-items: baseline;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.burger__cost{
+    font-size: 4.5rem;
+    color: #e45028;
+    display: block;
+    margin-right: 10px;
+
+    @include tablets {
+        font-size: 3.5rem;
+    }
+}
+
+.burger__valuta {
+    font-size: 1.875rem;
+    color: #e45028;
+    display: block;
+    margin-right: 30px;
+    
+    @include tablets {
+        font-size: 1.5rem;
+    }
+}
+
+.btn--order {
+    margin-right: rem(20px);
+    border: 0;
+    background: $red;
+    font-size: rem(13px);
+    text-transform: uppercase;
+    border-radius: rem(5px);
+    color: #fff;
+    @include ubuntu(middle);
+    padding: rem(10px) rem(15px);
+    cursor: pointer;
+
+    @include tablets {
+        font-size: rem(12px);
+    }
+}
+
+.burgers__consist-popup {
+    position: absolute;
+    left:  -9999px;
+    //left: 100%;
+    top: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    width: rem(270px);
+    border-radius: rem(10px);
+    width: rem(300px);
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, .7) 8px 8px 14px 4px;
+
+    &.burgers__consist-popup--active{
+        left:  100%;
+        opacity: 1;
+    }    
+
+    @include tablets {
+        width: rem(240px);
+    }
+
+    @include phones {
+        width: rem(190px);
+    }
+}
+
+.burgers__consist-popup-item {
+    font-size: rem(14px);
+    display: flex;
+    align-items: center;
+    cursor: default;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: 1);   
+        border-radius: 5px; 
+    } 
+}
+
+.burgers__consist-popup-pic {
+    margin-left: rem(25px);
+    margin-right: rem(25px);
+
+    @include phones {
+        margin-left: rem(10px);
+        margin-right: rem(10px);
+    }
+}
+
+.burgers__consist-popup-img {
+    width: rem(40px);
+    height: rem(40px);
+}
+
+.burgers__consist-popup-product {
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.burgers__consist-popup-weight {
+    margin-right: rem(20px);
+
+    @include phones {
+        margin-right: rem(30px);
+    }
+}

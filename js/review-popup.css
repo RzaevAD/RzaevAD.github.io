@@ -1,0 +1,88 @@
+.review-popup {
+  position: absolute;
+  background: rgba(47, 50, 52, 0.93);
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.review-popup_visible {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.review-popup__block {
+  width: 37%;
+  max-height: 45%;
+  max-height: 90%;
+  background-color: #FFF;
+  border-radius: 0.3125rem;
+  padding: 1.5625rem 1.25rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+@media screen and (max-width: 768px) {
+  .review-popup__block {
+    width: 80%; } }
+
+@media screen and (max-width: 480px) {
+  .review-popup__block {
+    width: 95%; } }
+
+.review-popup__head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 0.9375rem; }
+
+.review-popup__author {
+  font-family: "gagalin", sans-serif;
+  font-size: 1rem; }
+
+.review-popup__text {
+  line-height: 1.42;
+  font-size: 0.875rem;
+  font-family: "ubuntulight", sans-serif; }
+
+@media screen and (max-width: 768px) {
+  .review-popup__text {
+    line-height: 1.1; } }
+
+.review-popup__close {
+  display: inline-block;
+  right: 0;
+  top: 0.9375rem;
+  opacity: .7;
+  cursor: pointer; }
+
+.review-popup__close:hover {
+  opacity: 1; }

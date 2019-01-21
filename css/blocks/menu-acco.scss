@@ -1,0 +1,75 @@
+.menu-acco {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	width: 50%;  
+	justify-content: flex-end;
+
+	@include tablets {
+		width: 80%;
+	}
+
+	@include phones {
+		width: 100%;
+	}
+
+}
+
+.menu-acco__item {
+	height: 100%;
+	display: flex;
+		&.menu-acco__item--active {
+			.menu-acco__trigger-text {
+				color: $yellow;
+			}
+		}
+}
+
+.menu-acco__trigger {
+	width: rem(80px);
+	display: block;
+	height: 100%;
+	float: left;
+	@include cover;
+	text-decoration: none;
+  	position: relative;
+}
+
+.menu-acco__trigger-text {
+	font-size: rem(40px);
+	color: #fff;
+	@include gagalin;
+	text-align: center;
+	white-space: nowrap;
+  	position: absolute;
+  	transform: rotate(-90deg) translateY(-50%);
+  	transform-origin: 0 0;
+  	left: 50%;
+  	bottom: 15%;
+	margin-top: rem(-20px);
+	width: 50vh;
+}
+
+.menu-acco__content {
+	height: 100%;
+	display: flex;
+	background: rgba(#2f3234, .93);
+	width: 0;
+	overflow: hidden;
+
+	@include tablets {
+		align-items: center;
+	}
+}
+
+.menu-acco__text {
+	@include ubuntu(light);
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  	line-height: 1.8;
+  	display: flex;
+}

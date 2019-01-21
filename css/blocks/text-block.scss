@@ -1,0 +1,12 @@
+.text-block {
+	p {
+		font-size: rem(14px);
+		line-height: 1.8;
+		text-align: center;
+		
+		@include phones {
+			text-align: left;  
+		}
+		
+  }
+}
